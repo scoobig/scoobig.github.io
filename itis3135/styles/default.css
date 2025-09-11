@@ -1,4 +1,4 @@
-body {
+        body {
             font-family: 'Franklin Gothic', 'Arial Narrow', Arial, sans-serif;
             background-color: #F3E4F5;
             color: #6b5183;
@@ -7,7 +7,7 @@ body {
             width: 90%;
         }
 
-        h1, h2 {
+        h1 {
             font-family: Georgia, 'Times New Roman', Times, serif;
         }
 
@@ -17,4 +17,27 @@ body {
 
         a:visited {
             color: #1b1323;
+        }
+
+        .portfolio {
+            text-align: center;
+        }
+
+        h2 {
+            font-family: Georgia, 'Times New Roman', Times, serif;       
+            margin-BOTTOM: 0; 
+        }
+
+        p  {
+             margin-TOP: 0.1;
+        }
+
+        img {
+            width: 20%;
+            height: auto;
+            display: block;
+            margin: auto;
+        }
+        .centertext {
+            text-align: center;
         }
