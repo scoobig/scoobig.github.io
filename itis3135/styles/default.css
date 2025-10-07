@@ -1,43 +1,67 @@
-        body {
-            font-family: 'Franklin Gothic', 'Arial Narrow', Arial, sans-serif;
-            background-color: #F3E4F5;
-            color: #6b5183;
-            margin: 0 auto;
-            max-width: 900px;
-            width: 90%;
-        }
+*, *::before, *::after {
+  box-sizing: border-box;
+}
 
-        h1 {
-            font-family: Georgia, 'Times New Roman', Times, serif;
-        }
+body {
+  font-family: 'Franklin Gothic', 'Arial Narrow', Arial, sans-serif;
+  background-color: #F3E4F5;
+  color: #6b5183;
+  margin: 0;
+}
 
-        a:link {
-            color: #46315a;
-        }
+main {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
 
-        a:visited {
-            color: #1b1323;
-        }
+h1, h2 {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
 
-        .portfolio {
-            text-align: center;
-        }
+h2 {
+  margin-bottom: 0;
+}
 
-        h2 {
-            font-family: Georgia, 'Times New Roman', Times, serif;       
-            margin-BOTTOM: 0; 
-        }
+p {
+  margin-top: 0.1em;
+}
 
-        p  {
-             margin-TOP: 0.1;
-        }
+a:link {
+  color: #46315a;
+}
 
-        img {
-            width: 20%;
-            height: auto;
-            display: block;
-            margin: auto;
-        }
-        .centertext {
-            text-align: center;
-        }
+a:visited {
+  color: #1b1323;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+}
+
+.portfolio, .centertext {
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  main {
+    width: 85%;
+  }
+
+  .portfolio img {
+    width: 45%;
+  }
+}
+
+@media (min-width: 1024px) {
+  main {
+    width: 80%;
+  }
+
+  .portfolio img {
+    width: 30%;
+  }
+}
