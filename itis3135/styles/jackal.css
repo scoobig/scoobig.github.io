@@ -1,0 +1,74 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Times New Roman', Times, serif;
+  background-color: #1A1A1A; 
+  color: #FFFFFF; 
+  margin: 0;
+}
+
+main {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-bottom: 40px;
+}
+
+h1, h2 {
+  font-family: 'Garamond', serif;
+  color: #E74C3C; 
+  border-bottom: 2px solid #D4AF37; 
+  padding-bottom: 5px;
+}
+
+p {
+  margin-top: 0.1em;
+  line-height: 1.6;
+}
+
+footer strong {
+    font-style: italic;
+    color: #E74C3C; 
+    font-size: 1.2em;
+}
+
+a:link {
+  color: #D4AF37; 
+
+a:visited {
+  color: #E74C3C; 
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+}
+
+.portfolio, .centertext {
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  main {
+    width: 85%;
+  }
+
+  .portfolio img {
+    width: 45%;
+  }
+}
+
+@media (min-width: 1024px) {
+  main {
+    width: 80%;
+  }
+
+  .portfolio img {
+    width: 30%;
+    }
+}
+}
