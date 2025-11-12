@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction Form</title>
+    
+    <link rel="stylesheet" href="styles/default.css"> 
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    
+    <script src="scripts/introduction.js" defer></script>
+    
+    <style>
+        form {
+          margin: 20px 0;
+          padding: 20px;
+          border: 1px solid #a98bc7; 
+          border-radius: 8px;
+          background-color: #faf5fb; 
+        }
+        
+        fieldset {
+          border: 1px dashed #6b5183; 
+          padding: 15px 20px;
+          margin-bottom: 20px;
+          border-radius: 5px;
+        }
+
+        legend {
+          font-family: Georgia, 'Times New Roman', Times, serif; 
+          font-weight: bold;
+          font-size: 1.3em;
+          padding: 0 10px;
+          color: #46315a; 
+        }
+
+        label {
+          display: block;
+          margin-top: 15px;
+          margin-bottom: 5px;
+          font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="url"],
+        input[type="date"],
+        input[type="file"],
+        textarea {
+          border: 1px solid #a98bc7; 
+          border-radius: 4px;
+          background-color: #fff;
+          font-family: 'Franklin Gothic', 'Arial Narrow', Arial, sans-serif;
+          color: #1b1323; 
+          font-size: 1em;
+        }
+
+        input[type="file"] {
+          padding: 5px;
+          background-color: #faf5fb;
+        }
+
+        ::placeholder {
+          color: #a98bc7;
+          opacity: 1; 
+        }
+
+        textarea {
+          resize: vertical;
+          min-height: 100px;
+        }
+
+        .form-buttons {
+          margin-top: 20px;
+        }
+
+        button[type="submit"],
+        button[type="reset"],
+        button[type="button"],
+        #reset-page {
+          font-family: 'Franklin Gothic', 'Arial Narrow', Arial, sans-serif;
+          font-size: 1em;
+          padding: 10px 15px;
+          border-radius: 4px;
+          cursor: pointer;
+          margin-right: 10px;
+          margin-bottom: 10px;
+          border: 1px solid #46315a; 
+          transition: background-color 0.2s ease, color 0.2s ease;
+        }
+
+        button[type="submit"],
+        #add-course,
+        #reset-page {
+          background-color: #46315a; 
+          color: #F3E4F5; 
+        }
+
+        button[type="submit"]:hover,
+        #add-course:hover,
+        #reset-page:hover {
+          background-color: #6b5183; 
+          border-color: #6b5183;
+        }
+
+        button[type="reset"],
+        .delete-course,
+        #clearBtn {
+          background-color: transparent;
+          color: #46315a;
+        }
+
+        button[type="reset"]:hover,
+        .delete-course:hover,
+        #clearBtn:hover {
+          background-color: #F3E4F5;
+          color: #1b1323;
+        }
+        
+        .course-entry {
+          display: flex;
+          flex-wrap: wrap; 
+          gap: 10px;
+          margin-bottom: 10px;
+          align-items: center;
+        }
+
+        .course-entry input {
+          width: auto; 
+          flex: 1 1 150px; 
+        }
+
+        .course-entry button {
+          flex-shrink: 0; 
+          margin-right: 0; 
+          padding: 8px 12px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div data-include="components/header.html"></div>
+    </header>
+    <main>
+        <div id="form-container">
+            <h2>Introduction Form</h2>
+            <h3>Please submit the form below.</h3>
+            
+            <form id="introForm">
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    <label for="fName">First Name:</label>
+                    <input type="text" id="fName" name="fName" value="YOUR_FIRST_NAME" placeholder="Your First Name" required>
+
+                    <label for="mName">Middle Name (or Initial):</label>
+                    <input type="text" id="mName" name="mName" value="YOUR_MIDDLE_NAME" placeholder="Optional">
+
+                    <label for="nName">Nickname/Preferred Name:</label>
+                    <input type="text" id="nName" name="nName" value="YOUR_NICKNAME" placeholder="Optional">
+
+                    <label for="lName">Last Name:</label>
+                    <input type="text" id="lName" name="lName" value="YOUR_LAST_NAME" placeholder="Your Last Name" required>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Mascot & Details</legend>
+                    <label for="mascotAdj">Mascot Adjective:</label>
+                    <input type="text" id="mascotAdj" name="mascotAdj" value="YOUR_MASCOT_ADJ" placeholder="e.g., Fighting" required>
+
+                    <label for="mascotAnimal">Mascot Animal:</label>
+                    <input type="text" id="mascotAnimal" name="mascotAnimal" value="YOUR_MASCOT_ANIMAL" placeholder="e.g., Aardvarks" required>
+
+                    <label for="divider">Divider:</label>
+                    <input type="text" id="divider" name="divider" value="YOUR_DIVIDER (e.g., ~)" placeholder="~, |, ♥️, etc." required>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Image</legend>
+                    <label for="image_url">Default Image URL:</label>
+                    <input type="text" id="image_url" name="image_url" value="images/YOUR_IMAGE.jpg" placeholder="URL to your default image" required>
+                    
+                    <label for="image_upload">Upload New Image (Optional):</label>
+                    <input type="file" id="image_upload" name="image_upload" accept="image/*">
+
+                    <label for="image_caption">Image Caption:</label>
+                    <input type="text" id="image_caption" name="image_caption" value="YOUR_IMAGE_CAPTION" placeholder="A caption for your image" required>
+                </fieldset>
+                
+                <fieldset>
+                    <legend>About Me</legend>
+                    <label for="personalStatement">Personal Statement:</label>
+                    <textarea id="personalStatement" name="personalStatement" placeholder="Write your personal statement here..." required>YOUR_PERSONAL_STATEMENT</textarea>
+
+                    <label>Main Bullets:</label>
+                    <input type="text" id="bullet1" name="bullet1" value="YOUR_BULLET_1" placeholder="Bullet point 1" required>
+                    <input type="text" id="bullet2" name="bullet2" value="YOUR_BULLET_2" placeholder="Bullet point 2" required>
+                    <input type="text" id="bullet3" name="bullet3" value="YOUR_BULLET_3" placeholder="Bullet point 3" required>
+                    <input type="text" id="bullet4" name="bullet4" value="YOUR_BULLET_4" placeholder="Bullet point 4" required>
+                    <input type="text" id="bullet5" name="bullet5" value="YOUR_BULLET_5" placeholder="Bullet point 5" required>
+                    <input type="text" id="bullet6" name="bullet6" value="YOUR_BULLET_6" placeholder="Bullet point 6" required>
+                    <input type="text" id="bullet7" name="bullet7" value="YOUR_BULLET_7" placeholder="Bullet point 7" required>
+                </fieldset>
+
+                <fieldset id="courses-fieldset">
+                    <legend>Courses</legend>
+                    <div id="courses-container">
+                        <div class="course-entry">
+                            <input type="text" name="course_dept" placeholder="Dept" value="YOUR_DEPT_1" required>
+                            <input type="text" name="course_num" placeholder="Num" value="YOUR_NUM_1" required>
+                            <input type="text" name="course_name" placeholder="Name" value="YOUR_NAME_1" required>
+                            <input type="text" name="course_reason" placeholder="Reason" value="YOUR_REASON_1" required>
+                            <button type="button" class="delete-course">Delete</button>
+                        </div>
+                    </div>
+                    <button type="button" id="add-course">Add Course</button>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Quote</legend>
+                    <label for="quote">Quote:</label>
+                    <input type="text" id="quote" name="quote" value="YOUR_QUOTE" placeholder="Your favorite quote" required>
+                    
+                    <label for="quoteAuthor">Quote Author:</label>
+                    <input type="text" id="quoteAuthor" name="quoteAuthor" value="YOUR_QUOTE_AUTHOR" placeholder="Who said it?" required>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Extras (Optional)</legend>
+                    <label for="funnyThing">Funny Thing:</label>
+                    <input type="text" id="funnyThing" name="funnyThing" value="YOUR_FUNNY_THING" placeholder="Optional">
+
+                    <label for="shareThing">Something to Share:</label>
+                    <input type="text" id="shareThing" name="shareThing" value="YOUR_SHARE_THING" placeholder="Optional">
+                </fieldset>
+
+                <fieldset>
+                    <legend>Links</legend>
+                    <label for="link1">Link 1 (e.g., LinkedIn):</label>
+                    <input type="url" id="link1" name="link1" value="https://www.linkedin.com/in/yourprofile" required>
+                    
+                    <label for="link2">Link 2 (e.g., GitHub):</label>
+                    <input type="url" id="link2" name="link2" value="https://www.linkedin.com/in/yourprofile" required>
+                    
+                    <label for="link3">Link 3:</label>
+                    <input type="url" id="link3" name="link3" value="https://www.charlotte.edu" placeholder="https://..." required>
+                    
+                    <label for="link4">Link 4:</label>
+                    <input type="url" id="link4" name="link4" value="https://www.google.com" placeholder="https://..." required>
+                    
+                    <label for="link5">Link 5:</label>
+                    <input type="url" id="link5" name="link5" value="https://www.uncc.edu" placeholder="https://..." required>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Acknowledgement</legend>
+                    <label for="ackStatement">Acknowledgment Statement:</label>
+                    <textarea id="ackStatement" name="ackStatement" placeholder="Your acknowledgment statement..." required>YOUR_ACK_STATEMENT</textarea>
+                    
+                    <label for="ackDate">Acknowledgement Date:</label>
+                    <input type="date" id="ackDate" name="ackDate" value="2025-01-20" required>
+                </fieldset>
+
+                <div class="form-buttons">
+                    <button type="submit">Submit</button>
+                    <button type="reset">Reset</button>
+                    <button type="button" id="clearBtn">Clear</button>
+                </div>
+            </form>
+        </div>
+
+        <div id="result-container" style="display:none;">
+        </div>
+    </main>
+
+    <footer>
+        <div data-include="components/footer.html"></div>
+    </footer>
+    <script src="scripts/HTMLInclude.min.js"></script>
+</body>
+</html>
